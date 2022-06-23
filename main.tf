@@ -17,7 +17,6 @@ resource "azurerm_app_service_plan" "func_host" {
 
 locals {
   app_settings = merge({
-    APPINSIGHTS_INSTRUMENTATIONKEY           = azurerm_application_insights.func_insights.instrumentation_key
     FUNCTIONS_WORKER_RUNTIME                 = "node"
     SCM_DO_BUILD_DURING_DEPLOYMENT           = "false"
     ENABLE_ORYX_BUILD                        = false
